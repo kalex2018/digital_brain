@@ -1,4 +1,4 @@
-// GET Home
+// GET Homepage
 
 exports.homepage = async (req, res) => {
     const locals = {
@@ -6,7 +6,10 @@ exports.homepage = async (req, res) => {
         description: 'Free NodeJS Notes App'
     }
 
-    res.render('index', locals);
+    res.render('index', {
+        locals,
+        layout: '../views/layouts/front-page'
+    });
 }
 
 // GET About
